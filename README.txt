@@ -35,3 +35,20 @@ The store should have size 2 and contain imageA and imageB.
    Insert <"Stormy hotels", imageB>
 
 The store should have size 1 and only contain imageB.
+
+
+Solution Description
+====================
+Two solutions are provided.
+
+ImageStore saves images in an array and draws on some elements of the ArrayList
+data structure. Any image saved to the array also has its id saved to a map as the key with the image's position in the
+array as the value.
+If an image no longer has any ids referring to it, its location in the array is set to null.
+When adding a new image to the array, the first null spot is filled, and if none are null, then the image is added
+to the end of the array. Before adding new elements to the array, its size is checked and in the event that more space
+is needed, the elements are copied into new array with additional space.
+
+ImageStoreTwo is very similar but instead of saving images in an array, it saves them as values in a HashMap, where the
+key of the image refers to a unique number. That same number is stored as the value in another map, there the
+corresponding key is the id of the image.
